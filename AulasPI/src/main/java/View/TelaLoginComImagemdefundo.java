@@ -2,6 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
+
 package View;
 
 /**
@@ -13,6 +14,13 @@ public class TelaLoginComImagemdefundo extends javax.swing.JFrame {
     /**
      * Creates new form TelaLogin
      */
+    
+     // comentario de uma linha
+    /*
+            para comentário   
+            de mais de 
+            um alinha
+    */
     public TelaLoginComImagemdefundo() {
         initComponents();
     }
