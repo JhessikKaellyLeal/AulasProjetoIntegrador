@@ -9,6 +9,7 @@ package View;
  *
  * @author user
  */
+
 public class TelaLoginComImagemdefundo extends javax.swing.JFrame {
 
     /**
@@ -62,6 +63,11 @@ public class TelaLoginComImagemdefundo extends javax.swing.JFrame {
         botaoAcesso.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
         botaoAcesso.setForeground(new java.awt.Color(255, 255, 255));
         botaoAcesso.setText("Acessar");
+        botaoAcesso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoAcessoActionPerformed(evt);
+            }
+        });
 
         labelLogo.setIcon(new javax.swing.ImageIcon("C:\\Users\\user\\Downloads\\Senac_logo.svg (1).png")); // NOI18N
 
@@ -141,6 +147,20 @@ public class TelaLoginComImagemdefundo extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void botaoAcessoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoAcessoActionPerformed
+        // TODO add your handling code here:
+        
+        // criando um objeto da tela
+        TelaHome telaPrincipal = new TelaHome();
+        // abrindo a Tela Home
+        telaPrincipal.setVisible(true);
+        
+        // fechar a tela de login
+         dispose();
+        
+        
+    }//GEN-LAST:event_botaoAcessoActionPerformed
 
     /**
      * @param args the command line arguments

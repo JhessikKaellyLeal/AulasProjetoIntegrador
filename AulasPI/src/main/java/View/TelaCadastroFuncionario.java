@@ -4,6 +4,8 @@
  */
 package View;
 
+import Model.FuncionarioModel;
+
 /**
  *
  * @author user
@@ -92,6 +94,11 @@ public class TelaCadastroFuncionario extends javax.swing.JFrame {
         botaoCadastrar.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         botaoCadastrar.setForeground(new java.awt.Color(255, 255, 255));
         botaoCadastrar.setText("Cadastrar");
+        botaoCadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoCadastrarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout painelCadastroLayout = new javax.swing.GroupLayout(painelCadastro);
         painelCadastro.setLayout(painelCadastroLayout);
@@ -185,6 +192,35 @@ public class TelaCadastroFuncionario extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void botaoCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCadastrarActionPerformed
+        // TODO add your handling code here:
+       
+        // criar um objeto da classe
+        FuncionarioModel funcionario = new FuncionarioModel();
+        // cadastrar os dados dentro da classe FuncionarioModel
+        // getText() funciona apenas para campos do tipo TextField
+        funcionario.setNome(campoNome.getText());
+        funcionario.setEmail(campoEmail.getText());
+        // capturar dados da comboBox
+        funcionario.setSexo((String)campoSexo.getSelectedItem());
+        // capturar dados do campo Password Field
+        funcionario.setSenha( new String(campoSenha.getPassword()));
+        // capturar os dados dos campos formatados
+        funcionario.setCpf(campoCpf.getText());
+        funcionario.setDataNascimento(labelDatanasciemnto.getText());
+        // capturar os dados do campo formatado sem o formato
+        funcionario.setCpf(campoCpf.getText().replaceAll("[^\\d]",""));
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_botaoCadastrarActionPerformed
 
     /**
      * @param args the command line arguments
