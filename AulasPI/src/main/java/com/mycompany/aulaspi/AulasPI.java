@@ -4,6 +4,9 @@
 
 package com.mycompany.aulaspi;
 
+import static Controller.ConexaoComBancoDados.conectar;
+import java.sql.Connection;
+
 /**
  *
  * @author user
@@ -11,6 +14,12 @@ package com.mycompany.aulaspi;
 public class AulasPI {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        
+        Connection conexao = conectar();
+        
+        if(conexao!=null){
+           System.out.println(conexao); 
+        }// fim do if      
+        
     }
 }
